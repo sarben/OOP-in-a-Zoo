@@ -4,8 +4,10 @@
 public class Animal {
     String name = "";
     String favoriteFood;
+    static int population = 0;
 
     public Animal(String name, String favoriteFood) {
+        populationCount();
         this.name = name;
         this.favoriteFood = favoriteFood;
     }
@@ -23,5 +25,10 @@ public class Animal {
         } else {
             this.sleep();
         }
+    }
+
+    public void populationCount(){
+        population +=1;
+        System.out.println(population);
     }
 }
